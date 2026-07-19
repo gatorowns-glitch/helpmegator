@@ -93,7 +93,7 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   padding: 14px 0;
 }
-.brand img { height: 58px; width: auto; }
+.brand img { height: 75px; width: auto; }
 .nav-links {
   display: flex;
   align-items: center;
