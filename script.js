@@ -21,6 +21,13 @@ if (toggle && links) {
   });
 }
 
+// Show form error banner if redirected back with ?error=1
+var errBanner = document.getElementById('form-error');
+if (errBanner && new URLSearchParams(window.location.search).get('error') === '1') {
+  errBanner.hidden = false;
+  errBanner.scrollIntoView({ block: 'center' });
+}
+
 // Scroll reveal
 var observer = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {

@@ -80,12 +80,11 @@
     <div class="contact-form reveal">
       <h2>Request your free quote</h2>
       <p class="form-sub">Fill this out and it comes straight to our inbox. The more detail, the better the quote.</p>
-      <form action="https://formsubmit.co/gator@helpmegator.com" method="POST">
-        <input type="hidden" name="_subject" value="New quote request from helpmegator.com">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://helpmegator.com/thanks.html">
-        <input type="text" name="_honey" style="display:none">
+      <div class="form-error" id="form-error" hidden>
+        Something went wrong sending your request. Please try again, or just call us at <a href="tel:+17622011247">1-762-201-1247</a>.
+      </div>
+      <form action="send-quote.php" method="POST">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="form-row">
           <div class="field">

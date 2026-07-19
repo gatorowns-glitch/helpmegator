@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thanks! — Help Me Gator</title>
+  <title>Request Received — Help Me Gator</title>
+  <meta name="robots" content="noindex">
   <link rel="icon" type="image/png" href="assets/logo-main.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,23 +18,89 @@
       <a class="brand" href="index.html" aria-label="Help Me Gator home">
         <img src="assets/logo-main.png" alt="Help Me Gator logo">
       </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html#work">Our Work</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why-us">Why Us</a></li>
+          <li><a href="index.html#process">Process</a></li>
+          <li><a href="contact.html" class="btn btn-green">Get a Free Quote</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section class="contact-hero" style="padding: 110px 0 130px;">
+  <section class="success-hero">
     <div class="container">
-      <img src="assets/mascot.png" alt="Help Me Gator mascot" style="max-height: 260px; margin: 0 auto 30px;">
-      <h1>Got it! Your message is in.</h1>
-      <p>Thanks for reaching out — we'll get back to you with a straight answer, usually within one business day. Need us sooner? Call <a href="tel:+17622011247" style="color: var(--green); font-weight: 700;">1-762-201-1247</a>.</p>
-      <div style="margin-top: 36px;">
-        <a href="index.html" class="btn btn-green btn-lg">Back to Home</a>
+      <div class="success-check" aria-hidden="true">
+        <svg viewBox="0 0 52 52"><circle class="check-circle" cx="26" cy="26" r="24" fill="none"/><path class="check-mark" fill="none" d="M14 27l8 8 16-17"/></svg>
+      </div>
+      <span class="eyebrow">Request Received</span>
+      <h1>Got it — your quote request is in.</h1>
+      <p class="success-sub">Thanks for reaching out. A real person (the one who'll actually build your site) is going to read this and get back to you with a straight answer.</p>
+    </div>
+  </section>
+
+  <section class="success-next">
+    <div class="container">
+      <div class="next-grid">
+        <div class="next-card">
+          <div class="next-num">1</div>
+          <h3>We read it</h3>
+          <p>Your request goes straight to our inbox — no ticket queues, no offshore call centers, no "case numbers."</p>
+        </div>
+        <div class="next-card">
+          <div class="next-num">2</div>
+          <h3>We reply within a business day</h3>
+          <p>Usually much sooner. You'll get real answers: what it takes, what it costs, and when you'll have it.</p>
+        </div>
+        <div class="next-card">
+          <div class="next-num">3</div>
+          <h3>We talk it through</h3>
+          <p>A quick call or email thread to nail down the details — then we get to work.</p>
+        </div>
+      </div>
+
+      <div class="success-actions">
+        <p class="success-phone">Need us right now? Call <a href="tel:+17622011247">1-762-201-1247</a></p>
+        <div class="hero-ctas" style="justify-content:center;">
+          <a href="index.html#work" class="btn btn-green btn-lg">See Our Work While You Wait</a>
+          <a href="index.html" class="btn btn-outline btn-lg">Back to Home</a>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-main.png" alt="Help Me Gator logo">
+          <p>Custom websites and web applications built by hand, delivered on time, and priced honestly. When your business needs to be online — Help Me Gator.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#work">Our Work</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#why-us">Why Us</a></li>
+            <li><a href="index.html#process">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get In Touch</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+17622011247">1-762-201-1247</a></li>
+            <li><a href="mailto:gator@helpmegator.com">gator@helpmegator.com</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <span>© <span id="year"></span> Help Me Gator · helpmegator.com</span>
         <span class="tagline">Snappy sites. No swamp prices.</span>
       </div>

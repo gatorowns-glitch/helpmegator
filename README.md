@@ -7,17 +7,18 @@ Custom static website for the Help Me Gator web design company. No frameworks, n
 - `index.html` — main landing page (hero, portfolio, straight-talk pitch, services, process, CTA)
 - `contact.html` — contact page with quote-request form
 - `thanks.html` — post-submission thank-you page
+- `send-quote.php` — self-hosted contact form handler (emails submissions via PHP `mail()`)
 - `styles.css` — all styling
 - `script.js` — mobile nav, scroll-reveal animations, footer year
 - `assets/` — logos (logo-main.png, mascot.png, wordmark-eye.png)
 
-## Contact form (important — one-time activation)
+## Contact form
 
-The form posts to **formsubmit.co**, which forwards submissions to `gator@helpmegator.com` — no backend or account needed. **The first time someone submits the form on the live site, FormSubmit emails gator@helpmegator.com a one-click confirmation link. Click it once and all future submissions flow through.** Submit a test yourself after launch to trigger it. (The gator@helpmegator.com mailbox must exist and be able to receive mail first.)
+The form posts to `send-quote.php`, a self-hosted PHP handler (no third-party services). It validates the fields, blocks bots with a honeypot, and emails the request to `gator@helpmegator.com` via PHP `mail()` — which works out of the box on cPanel hosting. On success it redirects to `thanks.html`; on failure back to `contact.html?error=1`, which shows an error banner.
 
-After confirming, FormSubmit gives you a random alias (like `formsubmit.co/el/abc123`) you can swap into the form `action` to hide the raw email address from spam bots.
+Requirements: PHP on the host (cPanel has it by default) and the `gator@helpmegator.com` mailbox existing so mail can be delivered. The From address is `noreply@helpmegator.com` (same domain, so it passes spam checks); the visitor's address goes in Reply-To, so hitting Reply answers them directly.
 
-The form redirects to `https://helpmegator.com/thanks.html` after submission (`_next` hidden field) — this only works once the site is live on the real domain.
+Note: the form can't be tested on the local static preview (no PHP) — test it on the live server.
 
 ## Deploying
 
