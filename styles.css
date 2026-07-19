@@ -416,6 +416,31 @@ img { max-width: 100%; display: block; }
 .service-card h3 { color: var(--navy); font-size: 1.18rem; margin-bottom: 10px; }
 .service-card p { color: var(--text-soft); font-size: .97rem; }
 
+/* ---------- Hosting callout ---------- */
+.hosting-callout {
+  margin-top: 44px;
+  background: linear-gradient(120deg, var(--navy) 0%, #1d3253 100%);
+  border-radius: var(--radius-lg);
+  padding: 40px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  box-shadow: var(--shadow-md);
+}
+.hosting-callout h3 {
+  color: #fff;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+.hosting-callout p {
+  color: var(--text-on-dark);
+  font-size: 1rem;
+  max-width: 68ch;
+}
+.hosting-callout .btn { flex: none; }
+
 /* ---------- Process ---------- */
 .process { background: var(--cream); }
 .process-grid {
@@ -647,6 +672,7 @@ img { max-width: 100%; display: block; }
   .nav-links .btn { margin-top: 8px; justify-content: center; width: 100%; }
   .nav-toggle { display: block; }
   .services-grid, .process-grid { grid-template-columns: 1fr; }
+  .hosting-callout { flex-direction: column; align-items: flex-start; padding: 32px 26px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .section { padding: 68px 0; }
   .cta-band .wordmark-wrap { padding: 18px 22px; }
